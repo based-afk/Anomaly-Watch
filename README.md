@@ -54,10 +54,4 @@ python consumer.py
 ```
 
 ## 🚧 Current Scope Limitations
-- **WebSocket Auth**: There is currently no authentication or authorization on the WebSocket layer. This is an explicit cut to keep the focus on infrastructure and streaming performance. 
-
-## 📅 Roadmap
-- **Week 1 (Done)**: Ingestion (Redpanda + ClickHouse)
-- **Week 2 (Next)**: Machine Learning (Isolation Forest & Lead-time logic)
-- **Week 3**: Real-time Node.js WebSocket API
-- **Week 4**: React SRE Dashboard & Performance Profiling
+- **WebSocket Auth**: There is currently no authentication or authorization on the WebSocket layer. This is an explicit cut to keep the focus on infrastructure and streaming performance.
