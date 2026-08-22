@@ -1,5 +1,9 @@
-CREATE DATABASE IF NOT EXISTS observability;
+from clickhouse_driver import Client
 
+client = Client(host='localhost')
+client.execute('DROP TABLE IF EXISTS observability.telemetry')
+client.execute('CREATE DATABASE IF NOT EXISTS observability')
+client.execute('''
 CREATE TABLE IF NOT EXISTS observability.telemetry (
     id UUID,
     service String,
@@ -11,4 +15,6 @@ CREATE TABLE IF NOT EXISTS observability.telemetry (
     anomaly_score Float64,
     predictive_alert UInt8
 ) ENGINE = MergeTree()
-ORDER BY (service, timestamp);
+ORDER BY (service, timestamp)
+''')
+print("Schema recreated successfully.")

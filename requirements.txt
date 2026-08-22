@@ -1,3 +1,6 @@
 confluent-kafka==2.3.0
 clickhouse-driver==0.2.6
 numpy==1.26.2
+scikit-learn
+pandas
+joblib
