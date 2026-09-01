@@ -4,3 +4,4 @@ numpy==1.26.2
 scikit-learn
 pandas
 joblib
+requests
